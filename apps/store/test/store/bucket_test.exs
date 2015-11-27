@@ -1,5 +1,5 @@
 defmodule Store.BucketTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
 
   setup do
     {:ok, bucket} = Store.Bucket.start_link
