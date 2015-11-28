@@ -1,12 +1,3 @@
-defmodule Forwarder do
-   use GenEvent
-
-   def handle_event(event, parent) do
-     send parent, event
-     {:ok, parent}
-   end
- end
-
 defmodule Store.Bucket.SupervisorTest do
   use ExUnit.Case, async: true
 
