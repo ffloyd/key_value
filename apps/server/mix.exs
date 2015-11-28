@@ -16,7 +16,7 @@ defmodule Server.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :store],
+    [applications: [:logger, :store, :pipe],
      mod: {Server, []}]
   end
 
@@ -34,6 +34,9 @@ defmodule Server.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:store, in_umbrella: true}]
+    [
+      {:store, in_umbrella: true},
+      {:pipe, "~> 0.0.2"}
+    ]
   end
 end
